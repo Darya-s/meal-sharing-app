@@ -33,7 +33,7 @@ export default function Meal() {
 
   return (
     <>
-      <div className="main">
+      <div className="container">
         <MealCard key={meal.id}>
           <Link to={`/meals/${meal.id}`}>
             <div className="card-img"></div>
