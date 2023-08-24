@@ -4,7 +4,7 @@ import { MealsContext } from "./MealsContext";
 import { Link, NavLink, useParams } from "react-router-dom";
 import { AddReservation } from "./AddReservation";
 import MealCard from "./MealCard";
-
+import './MealCard.css'
 export default function Meal() {
   const { id } = useParams();
   const { getMeal, isSuccess } = useContext(MealsContext);
@@ -36,7 +36,7 @@ export default function Meal() {
       <div className="container">
         <MealCard key={meal.id}>
           <Link to={`/meals/${meal.id}`}>
-            <div className="card-img"></div>
+            <div className="card-img"><img alt='food' src={meal.image_url}/></div>
             <div className="card-info">
               <p className="text-title"> {meal.title}</p>
               <p className="text-body"> {meal.description}</p>

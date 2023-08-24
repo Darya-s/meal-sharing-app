@@ -1,34 +1,40 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import TestComponent from "./components/TestComponent/TestComponent";
+import Header from "./components/Header"
 import MealList from "./components/MealList";
 import Meal from "./components/Meal";
 import { MealsProvider } from "./components/MealsContext";
 import MainPage from "./components/MainPage";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
-    <Router>
-      <MealsProvider>
-        <Route exact path="/">
-          <MainPage />
-        </Route>
+    <div className="wrapper">
+      <Router>
+      
+          <Header />
+     
 
-        <Route exact path="/meals">
-          <MealList />
-        </Route>
-        <Route exact path="/meals/:id">
-          <Meal />
-        </Route>
-      </MealsProvider>
+        <div className="main">
+          <MealsProvider>
+            <Route exact path="/">
+              <MainPage />
+            </Route>
 
-      <Route exact path="/lol">
-        <p>lol</p>
-      </Route>
-      <Route exact path="/test-component">
-        <TestComponent></TestComponent>
-      </Route>
-    </Router>
+            <Route exact path="/meals">
+              <MealList />
+            </Route>
+            <Route exact path="/meals/:id">
+              <Meal />
+            </Route>
+          </MealsProvider>
+        </div>
+      
+          <Footer />
+      
+      </Router>
+    </div>
   );
 }
 

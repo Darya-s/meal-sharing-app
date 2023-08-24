@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
-
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 ReactDOM.render(
-  <Router>
+
+  
     <App />
-  </Router>,
-  document.getElementById("root")
+
+
+ , document.getElementById("root")
 );
 
 serviceWorker.unregister();

@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-
+import './MainPage.css'
 import { Link } from "react-router-dom";
 import { MealsContext } from "./MealsContext";
 
