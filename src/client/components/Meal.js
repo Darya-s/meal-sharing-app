@@ -31,6 +31,8 @@ export default function Meal() {
     return <NavLink to="/" />;
   }
 
+  console.log(meal.image_url);
+
   return (
     <>
       <div className="container">

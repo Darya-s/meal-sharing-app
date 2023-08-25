@@ -1,6 +1,6 @@
 .card {
  
-  width: 250px;
+  width: 230px;
   padding: 0.75em;
   background: #f5f5f5;
   position: relative;
@@ -8,12 +8,18 @@
   border-radius: 1.5rem;
 }
 
+
+img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .card:nth-child(2n){
     background-color: aquamarine;
 }
 
 .card-img {
-  background-color: #ffcaa6;
+  
   height: 220px;
   width: 220px;
   margin: auto;
