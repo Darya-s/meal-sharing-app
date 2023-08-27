@@ -1,12 +1,23 @@
 import React from "react";
 import { createContext, useContext, useEffect, useState } from "react";
-
+import formatDate from "./FormatDate";
 export async function getMeals() {
+
+   
   const response = await fetch("api/meals");
   const data = await response.json();
+ // console.log(data,formatDate(when_date));
+ {data.map((item) => {
 
-  return data;
+  item.when_date=formatDate(item.when_date)
+
+  
+ })
 }
+return data;
+}
+
+
 
 export const MealsContext = createContext();
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useForm } from "react-hook-form";
-
+import "./AddReservation.css"
 export function AddReservation({ meal_id }) {
   const [reservation, setReservation] = useState({});
 
@@ -50,34 +50,37 @@ export function AddReservation({ meal_id }) {
 
   return (
     <>
-      <div className="login-container">
+     
         <form className="login-header" onSubmit={handleSubmit(onSubmit)}>
-          <label>Email</label>
+          
           <input
+          placeholder="Email"
             className="login-input"
             type="email"
             name="contact_email"
             {...register("contact_email")}
           />
 
-          <label>Name</label>
           <input
+          placeholder="Name"
             className="login-input"
             type="text"
             name="contact_name"
             {...register("contact_name")}
           />
 
-          <label>Phone number:</label>
+          
           <input
+          placeholder="Phone number"
             className="login-input"
             type="text"
             name="contact_phonenumber"
             {...register("contact_phonenumber")}
           />
 
-          <label>Number of guests:</label>
+         
           <input
+          placeholder="Number of guests"
             className="login-input"
             type="number"
             name="number_of_guests"
@@ -87,8 +90,9 @@ export function AddReservation({ meal_id }) {
           <button className="login-button" type="submit">
             Book seat
           </button>
+          
         </form>
-      </div>
+      
     </>
   );
 }

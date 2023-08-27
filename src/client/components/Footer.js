@@ -4,7 +4,8 @@ export default function Footer(){
  
     return(
     <div id="footer">
-            FOOTER
+        <div> ©Copyright Darya Stepanova</div>
+          <div id="menu">Hack Your Future 2023</div> 
     </div>)
 
 }

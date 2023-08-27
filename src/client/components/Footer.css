@@ -1,5 +1,14 @@
 #footer{
     display: flex;
-    height: 200px;
-    background-color: #ffcaa6;
+    justify-content: space-between;
+    height: 150px;
+    border-top:solid 1px #bba58f;
+    color:#e8d9cd;
+    
+  }
+
+  #menu{
+  display: flex;
+  justify-content: space-between
+     
   }

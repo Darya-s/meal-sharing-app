@@ -1,0 +1,25 @@
+#link > a {
+    color:#efefe9;
+}
+
+#link > a:hover {
+    color:aquamarine;
+}
+
+#link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:3%;
+    margin-top: 3%;
+}
+#meal{
+    margin-top:2em;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 5%;
+
+}
+
+

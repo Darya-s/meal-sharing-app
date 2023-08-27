@@ -5,6 +5,9 @@ import { Link, NavLink, useParams } from "react-router-dom";
 import { AddReservation } from "./AddReservation";
 import MealCard from "./MealCard";
 import './MealCard.css'
+import "./Meal.css"
+import formatDate from "./FormatDate";
+
 export default function Meal() {
   const { id } = useParams();
   const { getMeal, isSuccess } = useContext(MealsContext);
@@ -35,14 +38,15 @@ export default function Meal() {
 
   return (
     <>
-      <div className="container">
+      
+        <div id="meal">
         <MealCard key={meal.id}>
           <Link to={`/meals/${meal.id}`}>
-            <div className="card-img"><img alt='food' src={meal.image_url}/></div>
+          <img alt='food' src={meal.image_url}/>
             <div className="card-info">
               <p className="text-title"> {meal.title}</p>
               <p className="text-body"> {meal.description}</p>
-              <p className="text-body"> {meal.when_date}</p>
+              <p className="text-body"> {formatDate(meal.when_date)}</p>
               <p className="text-title"> {meal.price} €</p>
               <p className="text-body">GUESTS: {meal.max_reservations} </p>
               <p className="text-body">LOCATION: {meal.location}</p>
@@ -51,19 +55,26 @@ export default function Meal() {
         </MealCard>
 
         <div
-          style={{
+             style={{
             display:
               parseInt(reservations.total_guests) < meal.max_reservations
                 ? "flex"
                 : "none",
           }}
+          className="login-container"s
         >
           <AddReservation meal_id={meal.id} />
         </div>
-      </div>
-      <Link className="links-style" to="/meals">
-        Back to meals list
+        </div>
+    
+      
+
+      <div id="link">
+      <Link  to="/meals">
+        BACK TO MEALS
       </Link>{" "}
+      </div>
+     
     </>
   );
 }

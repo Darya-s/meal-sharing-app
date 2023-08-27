@@ -7,4 +7,18 @@
   margin-bottom:3%;
  
 }
+.link-style{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:2%;
+} 
 
+.link-style > a  {
+  color:#efefe9;
+
+}
+
+.link-style > a:hover {
+  color:aquamarine;
+}
