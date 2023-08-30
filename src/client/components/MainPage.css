@@ -11,7 +11,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom:2%;
+  margin-bottom:2em;
+  margin-top: 3em;
 } 
 
 .link-style > a  {
@@ -21,4 +22,27 @@
 
 .link-style > a:hover {
   color:aquamarine;
+}
+
+
+@media screen and (max-width: 750px) {
+  #root {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    
+    gap: 2em;
+    margin-top: 1%;
+    margin-bottom:1%;
+  }
+
+   .link-style > a:hover {
+    color:aquamarine;
+  }
 }

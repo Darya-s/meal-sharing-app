@@ -23,3 +23,13 @@
 }
 
 
+@media screen and (max-width: 400px) {
+  
+
+    #meal{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+    }
+  }
+

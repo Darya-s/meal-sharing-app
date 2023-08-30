@@ -46,7 +46,7 @@ export default function Meal() {
             <div className="card-info">
               <p className="text-title"> {meal.title}</p>
               <p className="text-body"> {meal.description}</p>
-              <p className="text-body"> {formatDate(meal.when_date)}</p>
+              <p className="text-body"> {meal.when_date}</p>
               <p className="text-title"> {meal.price} €</p>
               <p className="text-body">GUESTS: {meal.max_reservations} </p>
               <p className="text-body">LOCATION: {meal.location}</p>
@@ -61,7 +61,7 @@ export default function Meal() {
                 ? "flex"
                 : "none",
           }}
-          className="login-container"s
+          className="login-container"
         >
           <AddReservation meal_id={meal.id} />
         </div>

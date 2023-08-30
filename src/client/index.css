@@ -38,6 +38,7 @@ h1 {
 
 
 .main{
+
  
 }
 
@@ -69,5 +70,11 @@ label {
   #root {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  body {
+  
+    font-size: 1em;
+   
   }
 }
