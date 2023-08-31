@@ -69,7 +69,7 @@ svg {
 }
 
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 450px) {
   #root {
     padding-left: 0;
     padding-right: 0;
