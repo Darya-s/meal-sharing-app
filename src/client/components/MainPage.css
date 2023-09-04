@@ -4,45 +4,40 @@
   grid-template-rows: auto;
   gap: 50px 50px;
   margin-top: 3%;
-  margin-bottom:3%;
- 
+  margin-bottom: 3%;
+  justify-items: center;
 }
-.link-style{
+.link-style {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom:2em;
+  margin-bottom: 2em;
   margin-top: 3em;
-} 
+}
 
-.link-style > a  {
-  color:#efefe9;
-
+.link-style > a {
+  color: #efefe9;
 }
 
 .link-style > a:hover {
-  color:aquamarine;
+  color: aquamarine;
 }
 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+ 
 
-@media screen and (max-width: 450px) {
-  #root {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .container{
+  .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
     justify-items: center;
-    
+
     gap: 2em;
     margin-top: 1%;
-    margin-bottom:1%;
+    margin-bottom: 1%;
   }
 
-   .link-style > a:hover {
-    color:aquamarine;
+  .link-style > a:hover {
+    color: aquamarine;
   }
 }

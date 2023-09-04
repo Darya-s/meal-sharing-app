@@ -59,18 +59,10 @@ label {
   line-height: 1.5rem;
 }
 
-@media screen and (max-width: 1400px) {
-  #root {
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-}
 
-@media screen and (max-width: 450px) {
-  #root {
-    padding-left: 0;
-    padding-right: 0;
-  }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+ 
 
   body {
   

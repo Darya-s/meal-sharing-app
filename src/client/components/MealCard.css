@@ -1,5 +1,5 @@
 .card {
-  height:400px;
+  height: 400px;
   width: 225px;
   padding: 0.75em;
   background: #efefe9;
@@ -8,21 +8,19 @@
   border-radius: 1.5rem;
 }
 
-
-img{
+img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width:200px;
+  width: 200px;
   border-radius: 10%;
-    border: solid 3px #bba58f;
+  border: solid 3px #bba58f;
 }
-.card:nth-child(2n){
-    background-color: #e8d9cd;
+.card:nth-child(2n) {
+  background-color: #e8d9cd;
 }
 
 .card-img {
-  
   height: 220px;
   width: 220px;
   margin: auto;
@@ -34,10 +32,10 @@ svg {
   height: 20px;
 }
 
-.card-info{
-    display: flex;
-    flex-direction: column;
-    gap:15px;
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .card-footer {
@@ -51,7 +49,7 @@ svg {
 
 /*Text*/
 .text-title {
-  font-weight: 900;
+
   font-size: 1em;
   line-height: 1;
 }
@@ -68,16 +66,12 @@ svg {
     rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 768px) {
 
-@media screen and (max-width: 450px) {
-  #root {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
   .card {
-    height:350px;
-    width: 125;
+    height: 350px;
+    width: 250px;
     padding: 0.02em;
     background: #efefe9;
     position: relative;
@@ -85,19 +79,12 @@ svg {
     border-radius: 1.5rem;
   }
 
-  img{
-   
-   
-    width:95%;
-    margin:auto;
-    
+  img {
+    width: 95%;
+    margin: auto;
   }
 
-  .card-info{
-   
-   
-    margin-left:0.5em;
-  
-}
-  
+  .card-info {
+    margin-left: 0.5em;
+  }
 }
