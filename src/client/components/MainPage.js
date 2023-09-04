@@ -39,9 +39,9 @@ function MainPage() {
                   <p className="text-body"> {formatDate(meal.when_date)}</p>
                   <p className="text-title"> {meal.price} €</p>
                   <p className="text-body">
-                    NUMBER OF GUESTS: {meal.max_reservations}{" "}
+                    Guests number: {meal.max_reservations}{" "}
                   </p>
-                  <p className="text-title">LOCATION: {meal.location}</p>
+                  <p className="text-title">Location: {meal.location}</p>
                 </div>
               </Link>
             </MealCard>

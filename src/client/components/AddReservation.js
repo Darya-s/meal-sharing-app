@@ -26,7 +26,7 @@ export function AddReservation({ meal_id }) {
     console.log(data);
 
     try {
-      const added = await fetch("http://localhost:5000/api/reservations", {
+      const added = await fetch("api/reservations", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

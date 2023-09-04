@@ -48,8 +48,8 @@ export default function Meal() {
               <p className="text-body"> {meal.description}</p>
               <p className="text-body"> {meal.when_date}</p>
               <p className="text-title"> {meal.price} €</p>
-              <p className="text-body">GUESTS: {meal.max_reservations} </p>
-              <p className="text-body">LOCATION: {meal.location}</p>
+              <p className="text-body">Guests number: {meal.max_reservations} </p>
+              <p className="text-title">Location: {meal.location}</p>
             </div>
           </Link>
         </MealCard>

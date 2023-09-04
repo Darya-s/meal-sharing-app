@@ -44,7 +44,7 @@ svg {
 
 /*Text*/
 .text-title {
-
+  font-weight: 900;
   font-size: 1em;
   line-height: 1;
 }

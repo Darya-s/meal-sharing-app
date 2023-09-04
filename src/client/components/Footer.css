@@ -1,28 +1,16 @@
-#footer{
-    display: flex;
-    justify-content: space-between;
-    height: 150px;
-    border-top:solid 1px #bba58f;
-    color:#e8d9cd;
-    
+#footer {
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  border-top: solid 1px #bba58f;
+  color: #e8d9cd;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  #footer {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 1em;
   }
-
- 
-
-  @media screen and (min-width: 320px) and (max-width:768px) {
-  
-
-    
-  #footer{
-display: grid;
-justify-items: center;
-justify-content: center;
-margin-top: 1em;
-       
-    }
-  }
-
-
-
-
-  
+}
