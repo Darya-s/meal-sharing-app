@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useForm } from "react-hook-form";
-import "./AddReservation.css"
+import "./AddReservation.css";
 export function AddReservation({ meal_id }) {
   const [reservation, setReservation] = useState({});
 
@@ -20,6 +20,7 @@ export function AddReservation({ meal_id }) {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
 
   const onSubmit = async (data) => {
@@ -42,6 +43,15 @@ export function AddReservation({ meal_id }) {
       });
       if (added.status === 200 && added.statusText === "OK") {
         alert("We have reserved place for You!");
+
+        reset(data => ({
+          ...data,
+          contact_email: '',
+          contact_name: '',
+          contact_phonenumber: '',
+          number_of_guests: '', 
+        }))
+
       }
     } catch (err) {
       console.error(err);
@@ -50,49 +60,43 @@ export function AddReservation({ meal_id }) {
 
   return (
     <>
-     
-        <form className="login-header" onSubmit={handleSubmit(onSubmit)}>
-          
-          <input
+      <form className="login-header" onSubmit={handleSubmit(onSubmit)}>
+        <input
           placeholder="Email"
-            className="login-input"
-            type="email"
-            name="contact_email"
-            {...register("contact_email")}
-          />
+          className="login-input"
+          type="email"
+          name="contact_email"
+          {...register("contact_email")}
+        />
 
-          <input
+        <input
           placeholder="Name"
-            className="login-input"
-            type="text"
-            name="contact_name"
-            {...register("contact_name")}
-          />
+          className="login-input"
+          type="text"
+          name="contact_name"
+          {...register("contact_name")}
+        />
 
-          
-          <input
+        <input
           placeholder="Phone number"
-            className="login-input"
-            type="text"
-            name="contact_phonenumber"
-            {...register("contact_phonenumber")}
-          />
+          className="login-input"
+          type="text"
+          name="contact_phonenumber"
+          {...register("contact_phonenumber")}
+        />
 
-         
-          <input
+        <input
           placeholder="Number of guests"
-            className="login-input"
-            type="number"
-            name="number_of_guests"
-            {...register("number_of_guests")}
-          />
+          className="login-input"
+          type="number"
+          name="number_of_guests"
+          {...register("number_of_guests")}
+        />
 
-          <button className="login-button" type="submit">
-            Book seat
-          </button>
-          
-        </form>
-      
+        <button className="login-button" type="submit">
+          Book seat
+        </button>
+      </form>
     </>
   );
 }
