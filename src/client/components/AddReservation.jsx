@@ -43,17 +43,17 @@ export function AddReservation({ meal_id }) {
       });
       if (added.status === 200 && added.statusText === "OK") {
         alert("We have reserved place for You!");
-        navigate('/meals');
+       navigate('/')
 
-        reset(data => ({
+       /* reset(data => ({
           ...data,
           contact_email: '',
           contact_name: '',
           contact_phonenumber: '',
           number_of_guests: '', 
-        }))
-
+        }))*/
       }
+      
     } catch (err) {
       console.error(err);
     }

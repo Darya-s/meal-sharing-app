@@ -45,7 +45,7 @@
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-hook-form": "^7.45.4",
-    "react-router-dom": "^5.3.4",
+    "react-router-dom": "^6.17.0",
     "sass": "^1.27.1",
     "sass-loader": "^10.0.4",
     "serve-favicon": "2.4.5",
