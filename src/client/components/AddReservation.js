@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { useForm } from "react-hook-form";
 import "./AddReservation.css";
@@ -43,6 +44,7 @@ export function AddReservation({ meal_id }) {
       });
       if (added.status === 200 && added.statusText === "OK") {
         alert("We have reserved place for You!");
+        navigate('/meals')
 
         reset(data => ({
           ...data,
