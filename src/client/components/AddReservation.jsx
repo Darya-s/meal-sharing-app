@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "./AddReservation.css";
+import Alert from "./Alert";
 export function AddReservation({ meal_id }) {
+   const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
   const [reservation, setReservation] = useState({});
   const navigate=useNavigate();
   const getTodayDate = () => {
@@ -42,19 +45,15 @@ export function AddReservation({ meal_id }) {
         }),
       });
       if (added.status === 200 && added.statusText === "OK") {
-        alert("We have reserved place for You!");
-       navigate('/')
+        
+        setAlertMessage(`We have reserved ${data.number_of_guests} spots for you!`);
+        setShowAlert(true);
 
-       /* reset(data => ({
-          ...data,
-          contact_email: '',
-          contact_name: '',
-          contact_phonenumber: '',
-          number_of_guests: '', 
-        }))*/
-      }
-      
-    } catch (err) {
+       setTimeout(() => {
+       navigate('/');
+       }, 3000);
+      };
+       } catch (err) {
       console.error(err);
     }
   };
@@ -94,9 +93,12 @@ export function AddReservation({ meal_id }) {
           {...register("number_of_guests")}
         />
 
+
         <button className="login-button" type="submit">
           Book seat
         </button>
+ {showAlert && <Alert message={alertMessage} />}
+
       </form>
     </>
   );
