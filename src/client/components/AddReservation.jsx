@@ -44,7 +44,7 @@ export function AddReservation({ meal_id }) {
           created_date: getTodayDate(),
         }),
       });
-      if (added.status === 200 && added.statusText === 'OK') {
+      if (added.status === 200) {
         setAlertMessage(
           `We have reserved ${data.number_of_guests} spots for you!`
         );
